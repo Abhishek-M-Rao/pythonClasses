@@ -33,6 +33,11 @@ class person:
             self.name = "default"
             self.personality = "null"
             self.isSitting = False
+    def sitdown(self):
+        self.isSitting = True
+
+    def standup(self):
+        self.isSitting = False
 
     def introduction(self):
         print("My name is " + self.name)
@@ -41,7 +46,7 @@ class person:
         if self.isSitting:
             print("I am sitting")
         else:
-            print("I am not sitting")
+            print("I am standing")
 
     def myPersonality(self):
         print("I am a " + self.personality + " person")
@@ -54,12 +59,8 @@ p3 = person()
 p1.introduction()
 p1.sittingOrNot()
 p1.myPersonality()
-p2.introduction()
-p2.sittingOrNot()
-p2.myPersonality()
-p3.introduction()
-p3.sittingOrNot()
-p3.myPersonality()
+p1.standup()
+p1.sittingOrNot()
 
 
 
