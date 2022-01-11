@@ -1,4 +1,3 @@
-# print("hello world!")
 class Robot:
     #make constructor
     def __init__(self, name=None, color=None, weight=None):
@@ -21,3 +20,47 @@ r3 = Robot()
 r1.introduce_self()
 r2.introduce_self()
 r3.introduce_self()
+
+#now second example - each person has a name, personaility, and isSitting or not - use function to change sit/stand up
+
+class person:
+    def __init__(self, name=None, personality=None, isSitting=None):
+        if name:
+            self.name = name
+            self.personality = personality
+            self.isSitting = isSitting
+        else:
+            self.name = "default"
+            self.personality = "null"
+            self.isSitting = False
+
+    def introduction(self):
+        print("My name is " + self.name)
+
+    def sittingOrNot(self):
+        if self.isSitting:
+            print("I am sitting")
+        else:
+            print("I am not sitting")
+
+    def myPersonality(self):
+        print("I am a " + self.personality + " person")
+
+
+p1 = person(name="Alice", personality="aggressive", isSitting=True)
+p2 = person(name="Becky", personality="talkative", isSitting=False)
+p3 = person()
+
+p1.introduction()
+p1.sittingOrNot()
+p1.myPersonality()
+p2.introduction()
+p2.sittingOrNot()
+p2.myPersonality()
+p3.introduction()
+p3.sittingOrNot()
+p3.myPersonality()
+
+
+
+
